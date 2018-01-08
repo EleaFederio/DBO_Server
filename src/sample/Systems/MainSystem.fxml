@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.MainSystem">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #3b5998;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="280.0" fitWidth="274.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../resources/bugcLogo.png" />
+               </image>
+            </ImageView>
+            <Label text="Bicol University Gubat Campus" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="organizationLabel" text="Organization" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-7.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="usernameLabel" text="user" textFill="WHITE" />
+            <JFXButton fx:id="attendanceButton" mnemonicParsing="false" onAction="#selectAttendance" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #dfe3ee;" text="ATTENDANCE">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="eventsButton" mnemonicParsing="false" onAction="#selectEvents" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #dfe3ee;" text="EVENTS">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="recordsButton" mnemonicParsing="false" onAction="#selectRecords" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #dfe3ee;" text="RECORDS">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="sanctionsButton" mnemonicParsing="false" onAction="#selectSanctions" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #dfe3ee;" text="SANCTIONS">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="feesButton" mnemonicParsing="false" onAction="#selectFees" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #dfe3ee;" text="FEES">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="quitButton" fitHeight="70.0" fitWidth="200.0" onMouseClicked="#quitButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/shutdown.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

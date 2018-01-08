@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="feesWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.Fees">
+   <top>
+      <VBox prefHeight="120.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #1d2c4c;">
+               <children>
+                  <Label layoutX="363.0" text="FEES" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="createFeesButton" mnemonicParsing="false" onAction="#createFeesSelected" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: d8dfea;" text="Create Fees">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="collectFeesButton" mnemonicParsing="false" onAction="#collectFeesSelected" prefHeight="50.0" prefWidth="400.0" text="Collect Fees">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children></HBox>
+            <Pane prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #81858c;" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

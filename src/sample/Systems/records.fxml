@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.Records">
+   <children>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #1d2c4c;">
+         <children>
+            <Label text="RECORDS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #81858c;">
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox prefHeight="730.0" prefWidth="100.0" style="-fx-background-color: #888888;">
+         <children>
+            <VBox prefHeight="690.0" prefWidth="100.0" style="-fx-background-color: #32506d;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Student ID:" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="studentIdField" focusColor="#e1f82d" unFocusColor="#dad3d3">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#searchStudent" style="-fx-background-color: WHITE;" text="SEARCH">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="First Name: " textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="firstNameLabel" text="Label" textFill="#e1f82d" />
+                        <Label text="Last Name: " textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lastNameLabel" text="Label" textFill="#e1f82d">
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font></Label>
+                        <Label text="Year &amp; Block: " textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="yearAndBlockLabel" prefHeight="17.0" prefWidth="39.0" text="Label" textFill="#e1f82d">
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="eventTable" prefHeight="201.0" prefWidth="450.0">
+                    <columns>
+                      <TableColumn fx:id="eventNameColumn" prefWidth="367.0" text="Events" />
+                        <TableColumn fx:id="eventAttendanceColumn" minWidth="0.0" prefWidth="82.0" text="√ / X" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="155.0" right="155.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <TableView fx:id="feesRecordTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="feesNameColumn" prefWidth="361.0" text="Fees" />
+                      <TableColumn fx:id="feesAttendanceColumn" prefWidth="88.0" text="√ / X" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="155.0" right="155.0" top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="229.0" text="Events / Fees" />
+                      <TableColumn prefWidth="221.0" text="Sanctions" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="155.0" right="155.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children></VBox>
+   </children>
+</VBox>

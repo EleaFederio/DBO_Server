@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.attendanceWindow.Attendance">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="200.0" style="-fx-background-color: #3B5998;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="555.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/bugcLogo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="570.0" layoutY="107.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="341.0" layoutY="166.0" text="Please place your RIGHT THUMB for Biometric Attendance." textFill="WHITE">
+               <font>
+                  <Font name="Buxton Sketch" size="25.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutX="104.0" layoutY="222.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2b3b4e;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="First Name:" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="firstNameLabel" text="Label" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Last Name:" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lastNameLabel" text="Label" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Course:" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="courseLabel" text="Label" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Year: " textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="yearLabel" text="Label" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Block:" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="blockLabel" text="Label" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" maxHeight="20.0" minHeight="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="Ok">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="35.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label text="Attendance List" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="attendanceRecordTable" prefHeight="300.0" prefWidth="300.0">
+                    <columns>
+                      <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="First Name" />
+                      <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="Last Name" />
+                        <TableColumn fx:id="courseColumn" prefWidth="100.0" text="Course" />
+                        <TableColumn fx:id="yearColumn" prefWidth="75.0" text="Year" />
+                        <TableColumn fx:id="blockColumn" prefWidth="75.0" text="Block" />
+                        <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Time-In" />
+                        <TableColumn fx:id="timeColumn" prefWidth="100.0" text="Time-Out" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="120.0" right="120.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="-1.0" layoutY="128.0" prefHeight="50.0" prefWidth="1200.0">
+               <children>
+                  <Label fx:id="eventNameLabel" contentDisplay="CENTER" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children></VBox>
+         </children></Pane>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="150.0">
+         <children>
+            <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#openDevice" prefWidth="80.0" style="-fx-background-color: #9daccb;" text="Connect">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#goBack" prefWidth="80.0" style="-fx-background-color: #9daccb;" text="&lt;&lt; Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#closeDevice" prefWidth="80.0" style="-fx-background-color: #9daccb;" text="Disconnect">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets top="135.0" />
+         </VBox.margin></HBox>
+      <Label fx:id="infoLabel" text="Label">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>

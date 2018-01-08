@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="800.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Systems.feesWindow.CreateFeesSubScene">
+   <children>
+      <VBox alignment="CENTER" prefHeight="640.0" prefWidth="760.0" style="-fx-background-color: #32506d;">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+         <children>
+            <TableView fx:id="feesTable" onMouseClicked="#tableClick" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="feesNameColumn" prefWidth="491.0" text="Conrtibution" />
+                <TableColumn fx:id="feesAmountColumn" prefWidth="68.0" text="Amount" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </TableView>
+            <JFXTextField fx:id="contributionNameField" alignment="CENTER" focusColor="#d3ab55" labelFloat="true" promptText="Contribution Name" style="-fx-text-fill: #ffffffff; -fx-prompt-text-fill: #bf972a;" unFocusColor="#d8e138">
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="contributionAmountField" alignment="CENTER" focusColor="#d3ab55" labelFloat="true" maxWidth="100.0" prefWidth="100.0" promptText="Amount" style="-fx-prompt-text-fill: #bf972a; -fx-text-fill: #ffffff;" unFocusColor="#d8e138">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d8dfea;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></JFXButton>
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#edit" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d8dfea;" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d8dfea;" text="Remove">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</VBox>
